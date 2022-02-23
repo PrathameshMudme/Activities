@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="pdf">
+
+
+        <div class="header">
+            <div class="left">
+                <h1><span>Due</span> Invoice</h1>
+                <h2>Thank you for your purchase . Timely payment will be appreciated</h2>
+
+                <div class="flen">
+                    <div class="card">
+                        <h3>Invoice no.</h3>
+                        <div class="hash">
+                            <h1>#</h1>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Language</h3>
+                        <div class="dropdown">
+                            <select name="Language" id="Language">
+                                <option value="English">English(US)</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="right">
+                <img src="https://assets.materialup.com/uploads/dad3a1cf-babd-4b93-b678-dfcf58fb2f14/preview.jpg"
+                    alt="logo">
+                <div class="card">
+                    <h3>Currency</h3>
+
+                    <div class="dropdown">
+                        <select name="Currency" id="Currency">
+                            <option value="inr">Indian Rupee(INR)</option>
+                            <option value="usd">US Dollar(USD)</option>
+                            <option value="gbp">British Pound(GBP)</option>
+                            <option value="yen">Japanese yen(Yen)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle">
+            <div class="left">
+                <h4>From</h4>
+
+                <h5 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                    Your Business Inc. <br>
+                    Your Address <br>
+                    City & Zip , your company.
+                </h5>
+
+                <div class="To" style="display: block;">
+                    <h5>To,</h5>
+                    <textarea rows="3" cols="30" name="description">
+                                     </textarea><br>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="card">
+                    <h3>Date</h3>
+                    <input type="date">
+
+
+                </div>
+
+
+                <div class="card">
+                    <h3>Invoice Due</h3>
+
+                    <div class="dropdown">
+                        <select name="Invoice-Due" id="Invoice-Due">
+                            <option value="15">15 Days</option>
+                            <option value="20">20 Days</option>
+                            <option value="30">30 Days</option>
+                            <option value="45">45 Days</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Purchase Order Number</h3>
+                    <input type="text">
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="card">
+                <h1>Name</h1>
+                <textarea name="" id="" cols="20" rows="5"></textarea>
+            </div>
+            <div class="card">
+                <h1>Quantity</h1>
+                <input type="text">
+            </div>
+            <div class="card">
+                <h1>Rate</h1>
+                <input type="text">
+            </div>
+            <div class="card">
+                <h1>Amount</h1>
+                <input type="text">
+            </div>
+
+        </div>
+
+        <div class="header">
+            <div class="left">
+                <button>New Item</button>
+            </div>
+
+            <div class="right">
+                <div class="flen">
+                    <h1>Subtotal : </h1>
+                    <input type="text">
+                </div>
+                <hr>
+
+
+                <div class="flen">
+                    <h1>Value Added Tax : </h1>
+                    <input type="text" style="width: 60px; text-align: left;">
+                    <input type="text">
+                </div>
+                <hr>
+                <div class="flen">
+                    <h1>Total (GBP): </h1>
+                    <input type="text">
+                </div>
+                <hr>
+
+                <div class=" flen total">
+                    <h1>Total</h1>
+                    <div class="flen tot ">
+                        <h1>GBP</h1>
+                        <input type="text">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <button onclick="download()">Download PDF</button>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>
