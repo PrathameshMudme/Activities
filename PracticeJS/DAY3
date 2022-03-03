@@ -1,0 +1,129 @@
+//Set() constructor-
+//const set1 = new Set([1, 2, 3, 4, 5]);
+
+// Syntax:
+// new Set()
+
+
+// //ADD FUNCTION
+
+// console.log("1")
+
+// const set1 = new Set();
+
+// set1.add(42);
+// set1.add(42);
+// set1.add(13);
+
+// for (const item of set1) {
+//     console.log(item);
+// }
+// // expected output: 42
+// // expected output: 13
+
+
+// // SIZE FUNCTION -
+
+// const set1 = new Set();
+// const object1 = {};
+// set1.add(42);
+// set1.add('forty two');
+// set1.add('forty two');
+// set1.add(object1);
+// console.log(set1.size);
+// // // expected output: 3
+
+
+
+// //CLEAR FUNCTION
+
+// const set1 = new Set();
+// set1.add(1);
+// set1.add('foo');
+// console.log(set1.size);
+// // expected output: 2
+// set1.clear();
+// console.log(set1.size);
+// // expected output: 0
+
+
+// // //DELETE FUNCTION
+
+// const mySet = new Set();
+// mySet.add('foo');
+// console.log(mySet.delete('bar')); // Returns false. No "bar" element found to be deleted.
+// console.log(mySet.delete('foo')); // Returns true. Successfully removed.
+// console.log(mySet.has('foo'));    // Returns false. The "foo" element is no longer present.
+
+
+// // //HAS METHOD
+// const set1 = new Set([1, 2, 3, 4, 5]);
+// console.log(set1.has(1));// expected output: true
+// console.log(set1.has(5));// expected output: true
+// console.log(set1.has(6));// expected output: false
+
+
+// // //ITERATOR
+// const set1 = new Set();
+
+// set1.add(42);
+// set1.add('forty two');
+// const iterator1 = set1[Symbol.iterator]();
+// console.log(iterator1.next().value);// expected output: 42
+// console.log(iterator1.next().value);// expected output: "forty two"
+
+
+// // //VALUES FUNCTION
+
+// const set1 = new Set();
+// set1.add(42);
+// set1.add('forty two');
+// const iterator1 = set1.values();
+// console.log(iterator1.next().value);// expected output: 42
+// console.log(iterator1.next().value);// expected output: "forty two"
+
+
+// //USING ENTRIES
+
+// const set1 = new Set();
+// set1.add(42);
+// set1.add('forty two');
+
+// const iterator1 = set1.entries();
+
+// for (const entry of iterator1) {
+//     console.log(entry);
+//     // expected output: [42, 42]
+//     // expected output: ["forty two", "forty two"]
+// }
+
+
+
+
+const mySet1 = new Set()
+
+mySet1.add(1)           // Set [ 1 ]
+mySet1.add(5)           // Set [ 1, 5 ]
+mySet1.add(5)           // Set [ 1, 5 ]
+mySet1.add('some text') // Set [ 1, 5, 'some text' ]
+const o = { a: 1, b: 2 }
+mySet1.add(o)
+
+mySet1.add({ a: 1, b: 2 })   // o is referencing a different object, so this is okay
+
+mySet1.has(1)              // true
+mySet1.has(3)              // false, since 3 has not been added to the set
+mySet1.has(5)              // true
+mySet1.has(Math.sqrt(25))  // true
+mySet1.has('Some Text'.toLowerCase()) // true
+mySet1.has(o)       // true
+
+mySet1.size         // 5
+
+mySet1.delete(5)    // removes 5 from the set
+mySet1.has(5)       // false, 5 has been removed
+
+mySet1.size         // 4, since we just removed one value
+console.log(mySet1)
+// logs Set(4) [ 1, "some text", {…}, {…} ] in Firefox
+// logs Set(4) { 1, "some text", {…}, {…} } in Chrome
