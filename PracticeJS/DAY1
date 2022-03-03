@@ -1,0 +1,48 @@
+//.map()
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The Array.map() method .</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [4, 9, 16, 25];
+document.getElementById("demo").innerHTML = numbers.map(Math.sqrt);
+
+const numbers = [65, 44, 12, 4];
+const newArr = numbers.map(myFunction);
+
+document.getElementById("demo").innerHTML = newArr;
+
+function myFunction(num) {
+  return num * 10;
+}
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+document.getElementById("demo").innerHTML = fruits;
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");
+
+document.getElementById("demo").innerHTML = fruits;
+
+const numbers = [175, 50, 25];
+document.getElementById("demo").innerHTML = numbers.reduce(myFunc);
+
+function myFunc(total, num) {
+  return total - num;
+}
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.reverse();
+
+
+</script>
+
+</body>
+</html>
