@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Dom manipulation</title>
+    <script src="script.js" defer> </script>
+</head>
+<body>
+   
+<!-- <div>
+    <span>Hello</span>
+    <span style="display:none;">Bye</span>
+
+     //to hide the element
+</div> -->
+
+
+<div>
+    <span id="hi">Hello</span>
+    <span id="bye">Bye</span>
+
+</div>
+
+</body>
+</html>'
+-----------------
+const body= document.body
+
+//Append a string
+
+//body.append("Hello World")
+//body.appendChild("Hello World")//cannot append a string.
+//body.append("Hello World", "bye")
+//body.appendChild("Hello World","bye")
+
+//Creating an element (append an element)
+
+//const di=document.createElement('div')
+//di.innerText= "Hello World" //1st way of adding the text
+//di.textContent= "Hello world 2"//2st way of adding the text
+//body.append(di)      //appendChild
+
+
+//----------------- Modifying the text 
+// const di= document.querySelector("div")
+// console.log(di.innerText)
+// console.log(di.textContent)
+//-----------------
+
+//Include HTML style
+// const di=document.createElement('div')
+//di.textContent= "<strong>Hello world 2</strong>"//or innerText both same
+
+// di.innerHTML= "<strong>Hello world 2</strong>"//add html into a string
+// body.append(di)
+
+//--------- Remove (bye)
+const div=document.querySelector("div")
+const spanHi = document.querySelector("#hi")
+const spanBye = document.querySelector("#bye")
+
+spanBye.remove() //to remove the Bye
+
+// div.append(spanBye)
+//---------------------------
+
